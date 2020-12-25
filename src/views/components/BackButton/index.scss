@@ -1,0 +1,19 @@
+.back-button {
+    font-weight: 500;
+    font-size: 15px;
+    color: #A5A8B3;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+
+    .arrow {
+        background: #96C1F9;
+        border-radius: 4px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        display: inline-block;
+        margin-right: 16px;
+    }
+}

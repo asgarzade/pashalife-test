@@ -1,0 +1,26 @@
+.generic-input {
+    // color: ;
+    border: 1px solid #E3E8EF;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 13px;
+    width: 236px;
+
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #ABB6C5;
+    }
+      
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #ABB6C5;
+    }
+      
+    &::-ms-input-placeholder { /* Microsoft Edge */
+        color: #ABB6C5;
+    }
+
+    &:focus {
+        border-color: #4F9BFF;
+        outline: none;
+    }
+}

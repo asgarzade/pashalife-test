@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter } from "react-router-dom";
+import Sidebar from './views/containers/Sidebar';
+import Header from './views/containers/Header';
+import Router from './views/routes';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <HashRouter>
+            <div className='app'>
+                <div className='d-flex'>
+                    <Sidebar />
+                    <div className='flex-grow-1'>
+                        <Header />
+                        <Router />
+                    </div>
+                </div>
+            </div>
+        </HashRouter>
+    );
 }
 
 export default App;

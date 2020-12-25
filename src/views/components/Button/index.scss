@@ -1,0 +1,20 @@
+.button {
+    cursor: pointer;
+    transition: all 0.2 ease-in-out;
+}
+
+.button-primary {
+    color: white;
+    background: linear-gradient(180deg, #00C6FF -144.44%, #0072FF 233.33%);
+    border: none;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: 500;
+    min-width: 128px;
+    outline: none;
+    padding: 10px;
+
+    &:hover {
+        background: linear-gradient(180deg, #1088AA -144.44%, #0072FF 233.33%);
+    }
+}

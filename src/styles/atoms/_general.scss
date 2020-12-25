@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    background-color: #FDFDFD;
+    font-family: 'Roboto', sans-serif;
+}
+
+// ------------ Badges ------------ //
+.badge {
+    border-radius: 1.3px;
+    font-size: 7px;
+    font-weight: 700;
+    padding: 3px;
+
+    &:not(:last-of-type) {
+        margin-right: 3px;
+    }
+}
+.badge--purple {
+    background: #F2F0FE;
+    color: #826CFC;
+}
+.badge--green {
+    background: #D7FFE2;
+    color: #54B806;
+}
+.badge--blue {
+    background: #C0E8FF;
+    color: #0085FF;
+}
+.badge--yellow {
+    background: #FFF9C7;
+    color: #D4A707;
+}
+.badge--light {
+    background-color: transparent;
+}
+.badge--large {
+    font-size: 10px;
+
+    &:not(:last-of-type) {
+        margin-right: 4px;
+    }
+}
