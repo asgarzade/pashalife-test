@@ -1,9 +1,11 @@
 import StaffCard from 'views/components/StaffCard';
 import StaffInformation from 'views/components/StaffInformation';
 import BackButton from 'views/components/BackButton';
-import { staffMember } from 'mockdata/staff';
+import { staffMembers } from 'mockdata/staff';
 
 const StaffMember = props => {
+    const id = parseInt(props.match.params.id);
+    const staffMember = staffMembers.find(staff => staff.id === id);
 
     return (
         <div className='staff-member mt-4'>

@@ -1,29 +1,34 @@
 import { NavLink } from "react-router-dom";
-import SidebarHeader from 'views/components/SidebarHeader';
+import ProfilePhoto from 'views/components/ProfilePhoto'
 import './index.scss';
 
 const user = {
     imagePath: '',
-    fullName: 'Khalid Asgazrade',
+    fullName: 'Khalid Asgarzade',
     email: 'k.asgarzade@gmail.com'
 }
 
 const Sidebar = () => {
     return (
         <div className='sidebar'>
-            <SidebarHeader 
-                user={user}
-            />
+            <div className='sidebar-header'>
+                <ProfilePhoto src={user.imagePath}/>
+                <div className='ml-2'>
+                    <h5 className='name'>{user.fullName}</h5>
+                    <p className='email'>{user.email}</p>
+                </div>
+            </div>
+            
             <nav className='sidebar-nav'>
-                <ul>
-                    <li><NavLink exact to='/'>Dashboard</NavLink></li>
-                    <li><NavLink to='/tasks'>Tasks</NavLink></li>
-                    <li><NavLink to='/email'>Email</NavLink></li>
-                    <li><NavLink to='/contacts'>Contacts</NavLink></li>
-                    <li><NavLink to='/chat'>Chat</NavLink></li>
-                    <li><NavLink to='/deals'>Deals</NavLink></li>
+                <ul className='list-unstyled'>
+                    <li><NavLink className='sidebar-link' exact to='/'>Dashboard</NavLink></li>
+                    <li><NavLink className='sidebar-link' to='/tasks'>Tasks</NavLink></li>
+                    <li><NavLink className='sidebar-link' to='/email'>Email</NavLink></li>
+                    <li><NavLink className='sidebar-link' to='/contacts'>Contacts</NavLink></li>
+                    <li><NavLink className='sidebar-link' to='/chat'>Chat</NavLink></li>
+                    <li><NavLink className='sidebar-link' to='/deals'>Deals</NavLink></li>
                 </ul>
-                <NavLink to='/settings'>Settings</NavLink>
+                <NavLink className='sidebar-link' to='/settings'>Settings</NavLink>
             </nav>
         </div>
     );

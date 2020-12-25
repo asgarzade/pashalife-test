@@ -22,12 +22,10 @@ const StaffInformation = props => {
     const { staffMember, className } = props;
     const [activeTab, setActiveTab] = useState(tabs[0]);
 
-    console.log(activeTab)
-
     return (
         <div className={`staff-information ${className}`}>
             <button className='back-btn' onClick={props.history.goBack}><Cross /></button>
-            <ul role='nav' className='staff-nav'>
+            <ul role='navigation' className='staff-nav'>
                 {
                     tabs.map(tab => (
                         <li 

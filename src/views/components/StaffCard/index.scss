@@ -6,6 +6,22 @@
     padding: 24px;
     flex-shrink: 0;
 
+    &.part-of-tree {
+        transform: translateY(50px);
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 40px;
+            border-right: 3px dashed #C8D1E2;
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 50%;
+        }
+    }
+
     .personal-info {
         color: #6F737C;
         display: flex;

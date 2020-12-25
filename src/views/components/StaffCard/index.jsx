@@ -5,10 +5,14 @@ import { ReactComponent as MailIcon } from 'assets/icons/email.svg';
 import './index.scss';
 
 const StaffCard = props => {
-    const { staffMember, showViewButton } = props;
+    const { staffMember, showViewButton, className, isPartOfTree, onCardClick } = props;
+
+    const onClick = () => {
+        if (isPartOfTree) onCardClick(staffMember.id);
+    }
 
     return (
-        <div className='staff-card'>
+        <div className={`staff-card ${className} ${isPartOfTree ? 'part-of-tree' : ''}`} onClick={onClick}>
             <div className='personal-info'>
                 <ProfilePhoto 
                     src={staffMember.imagePath}
